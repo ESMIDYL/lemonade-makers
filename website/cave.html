@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cave - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="level-detail cave">
+        <div class="level-header cave-bg">
+            <div class="level-title-section">
+                <h1 class="pixel-title">❄ Level 3: Shiverdeep Caverns</h1>
+                <p class="level-subtitle">Collect ice from slimes and return to the cabin</p>
+            </div>
+        </div>
+
+        <div class="level-content">
+            <div class="level-info">
+                <div class="info-card">
+                    <h2>Mission Objective</h2>
+                    <p>Hunt ShiverGoos throughout the cave and collect 15 ice. Defeat the HailCrusher to complete the game and make lemonade.</p>
+                </div>
+
+                <div class="info-card">
+                    <h2>Enemies</h2>
+                    <div class="enemy-list">
+                        <div class="enemy-item">
+                            <span class="enemy-sprite">🟦❄️</span>
+                            <div>
+                                <strong>ShiverGoos</strong>
+                                <p>Each ShiverGoo drops 1 ice when defeated. Hunt them throughout the cave.</p>
+                            </div>
+                        </div>
+                        <div class="enemy-item boss-enemy">
+                            <span class="enemy-sprite">👹❄️</span>
+                            <div>
+                                <strong>HailCrusher (Boss)</strong>
+                                <p>Final boss that drops 5 ice when defeated. Must be defeated to complete the game.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Drops & Features</h2>
+                    <div class="powerup-list">
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">❄️</span>
+                            <strong>Ice</strong> - 1 per ShiverGoo, 5 from HailCrusher
+                        </div>
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">🍋</span>
+                            <strong>Victory</strong> - Complete lemonade and achieve happiness
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Level Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-label">Target</span>
+                            <span class="stat-value">❄️ 15 Ice + Boss</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Return To</span>
+                            <span class="stat-value">🍋 Make Lemonade</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Weapon</span>
+                            <span class="stat-value">⚔️ Sword</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-visual-large">
+                <div class="map-placeholder">
+                    <h3>Map</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="level-actions">
+            <a href="levels.html" class="btn secondary">← Back to Levels</a>
+            <button class="btn primary">🎮 Hunt ShiverGoos</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

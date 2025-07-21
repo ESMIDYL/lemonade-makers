@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enemies - When Death Gives U Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="enemies-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGUL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Game Enemies</h1>
+    </section>
+
+    <main class="enemies-main">
+        <section class="enemies">
+            <div class="enemy-card">
+            <img src="images/malimoon.png" alt="Lemon Monster" class="enemy-image">
+            <div class="enemy-info">
+                <h3>Lemon Monsters</h3>
+                <p class="enemy-location">Found in: Forest</p>
+                <p class="enemy-description">Angry lemon beasts with health bars. Each monster drops 1 lemon when defeated. They spawn at the lemon hide and guard their citrus treasures fiercely.</p>
+                <div class="enemy-stats">
+                    <span class="stat">Drops: 🍋 1 Lemon</span>
+                    <span class="stat">Health: ❤️ Health Bar</span>
+                    <span class="stat">Attack: 🦵 Kick</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="enemy-card">
+            <img src="images/sugar cane.png" alt="Sugar Cane" class="enemy-image">
+            <div class="enemy-info">
+                <h3>Sugar Cane</h3>
+                <p class="enemy-location">Found in: Beach</p>
+                <p class="enemy-description">A peaceful, non-aggressive creature that doesn't attack players. Despite its gentle nature, it must be harvested for its valuable sugar. Feels wrong, but necessary for your lemonade quest.</p>
+                <div class="enemy-stats">
+                    <span class="stat">Drops: 🍬 1 Sugar</span>
+                    <span class="stat">Health: ❤️ Health Bar</span>
+                    <span class="stat">Attack: ❌ None (Peaceful)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="enemy-card">
+            <img src="images/shivergoo.png" alt="Ice Slimes" class="enemy-image">
+            <div class="enemy-info">
+                <h3>Ice Slimes</h3>
+                <p class="enemy-location">Found in: Ice Cave</p>
+                <p class="enemy-description">Bouncy ice creatures that slide around the cave floors. They attack by launching themselves at players and multiply when hit.</p>
+                <div class="enemy-stats">
+                    <span class="stat">Drops: ❄️ 1 Ice</span>
+                    <span class="stat">Health: ❤️ Health Bar</span>
+                    <span class="stat">Attack: 💥 Body Slam</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="enemy-card boss-card">
+            <img src="images/hailcrusher.png" alt="Hailcrusher Boss" class="enemy-image">
+            <div class="enemy-info">
+                <h3>Hailcrusher (BOSS)</h3>
+                <p class="enemy-location">Found in: Ice Cave Depths</p>
+                <p class="enemy-description">The massive ice demon that controls the cave. Shoots ice projectiles and creates devastating blizzard attacks. The ultimate challenge!</p>
+                <div class="enemy-stats">
+                    <span class="stat">Drops: ❄️ Boss Loot</span>
+                    <span class="stat">Health: ❤️ Health Bar</span>
+                    <span class="stat">Attack: ❄️ Ice Projectiles</span>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>🍋 Citrus Chaos Studios © 2024</p>
+        <div class="social">
+            <a href="#">Twitter</a>
+            <a href="#">Steam</a>
+            <a href="#">Discord</a>
+        </div>
+    </footer>
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Juice Quest - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="levels.html">Levels</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="levels-main">
+        <section class="levels-hero">
+            <h1 class="pixel-title">The Juice Quest</h1>
+        </section>
+
+        <section class="levels-grid">
+            <a href="forest.html" class="level-card forest">
+                <div class="level-banner" style="background: url('Level1ScreenShot.png') no-repeat center center; background-size: cover;"></div>
+                <div class="level-content">
+                    <h2>Level 1: LemonShade Hollow</h2>
+                    <p>Hunt lemon monsters in the forest. Collect 10 lemons total, but you can only carry 5 at a time. Return to lemon home to deposit.</p>
+                    <div class="click-hint">Click to explore →</div>
+                </div>
+            </a>
+
+            <a href="beach.html" class="level-card beach">
+                <div class="level-banner beach-banner"></div>
+                <div class="level-content">
+                    <h2>Level 2: Sugared Glass Shores</h2>
+                    <p>Navigate through a maze to find 10 glass and 15 sugar from sugar cane. No enemies to defeat - just exploration!</p>
+                    <div class="click-hint">Click to explore →</div>
+                </div>
+            </a>
+
+            <a href="cave.html" class="level-card cave">
+                <div class="level-banner" style="background: url('cavepic.png') no-repeat center center; background-size: cover;"></div>
+                <div class="level-content">
+                    <h2>Level 3: Shiverdeep Caverns</h2>
+                    <p>Hunt ShiverGoos for 15 ice and defeat the HailCrusher to complete the game.</p>
+                    <div class="click-hint">Click to explore →</div>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

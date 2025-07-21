@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    image-rendering: pixelated;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.pixel-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    border-bottom: 4px solid #FFD700;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover {
+    border-color: #FFD700;
+    background: #FFD700;
+    color: #000;
+}
+
+/* Home Page */
+.home-main {
+    min-height: 100vh;
+    position: relative;
+    padding-top: 80px;
+}
+
+.chaos-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+}
+
+.zone {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.forest-zone {
+    background: linear-gradient(45deg, #228B22, #006400);
+}
+
+.beach-zone {
+    background: linear-gradient(45deg, #F4A460, #DEB887);
+}
+
+.cave-zone {
+    background: linear-gradient(45deg, #4682B4, #191970);
+}
+
+.malimoon-sprite, .jade-sprite, .crab-sprite, .hailcrusher-sprite {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #FFD700;
+    border: 3px solid #000;
+    animation: bounce 2s infinite;
+}
+
+.malimoon-sprite {
+    top: 40%;
+    left: 30%;
+    background: #FF6347;
+}
+
+.jade-sprite {
+    top: 60%;
+    left: 20%;
+    background: #32CD32;
+}
+
+.crab-sprite {
+    top: 70%;
+    right: 30%;
+    background: #FF4500;
+}
+
+.hailcrusher-sprite {
+    top: 30%;
+    right: 20%;
+    background: #87CEEB;
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 200px auto;
+    max-width: 800px;
+    border: 4px solid #FFD700;
+}
+
+.pixel-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(20px, 4vw, 40px);
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 0px #FF6347;
+}
+
+.tagline {
+    font-size: 24px;
+    color: #FF6347;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.character-selector {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 3px solid #666;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.character.active {
+    border-color: #FFD700;
+    background: #444;
+}
+
+.char-sprite {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+}
+
+.joe-sprite {
+    background: #8B4513;
+}
+
+.jade-sprite {
+    background: #32CD32;
+}
+
+.char-info h3 {
+    font-size: 14px;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.char-info p {
+    font-size: 10px;
+    color: #ccc;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pixel-btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    padding: 15px 25px;
+    border: 3px solid;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.pixel-btn.primary {
+    background: #FFD700;
+    color: #000;
+    border-color: #000;
+}
+
+.pixel-btn.secondary {
+    background: #FF6347;
+    color: #fff;
+    border-color: #000;
+}
+
+.pixel-btn:hover {
+    transform: translate(2px, 2px);
+}
+
+/* About Page */
+.about-main, .levels-main {
+    padding: 120px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 24px;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 3px 3px 0px #FF6347;
+}
+
+.dev-party {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.dev-card {
+    background: #333;
+    border: 4px solid #FFD700;
+    padding: 30px;
+    text-align: center;
+}
+
+.dev-portrait {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border: 3px solid #000;
+}
+
+.mike { background: #FF6347; }
+.sarah { background: #32CD32; }
+.alex { background: #87CEEB; }
+.jamie { background: #DDA0DD; }
+
+.dev-card h3 {
+    font-size: 16px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.role {
+    font-size: 12px;
+    color: #FF6347;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.fact {
+    font-size: 10px;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Levels Page */
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.level-card {
+    border: 4px solid;
+    padding: 30px;
+    position: relative;
+}
+
+.level-card.forest {
+    background: #2F4F2F;
+    border-color: #228B22;
+}
+
+.level-card.beach {
+    background: #8B7355;
+    border-color: #F4A460;
+}
+
+.level-card.cave {
+    background: #2F4F4F;
+    border-color: #4682B4;
+}
+
+.level-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.level-preview {
+    width: 100%;
+    height: 100px;
+    border: 3px solid #000;
+    margin-bottom: 20px;
+}
+
+.forest-preview { background: #228B22; }
+.beach-preview { background: #F4A460; }
+.cave-preview { background: #4682B4; }
+
+.level-card h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.enemy-info {
+    font-size: 12px;
+    color: #FF6347;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.level-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.level-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #FFD700;
+}
+
+/* Footer */
+.pixel-footer {
+    background: #000;
+    border-top: 4px solid #FFD700;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.pixel-footer p {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 2px solid #FFD700;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .character-selector {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+}

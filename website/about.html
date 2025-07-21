@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Devs - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="about-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <h1 class="pixel-title">Our Idea</h1>
+        </section>
+
+        <section class="idea-section">
+            <div class="idea-card">
+                <h2>How We Picked Our Idea</h2>
+                <p>When brainstorming game concepts, we wanted something fun and unique that would make people smile. The phrase "when life gives you lemons, make lemonade" sparked our creativity - but we thought, what if death gave you lemons instead?</p>
+                <p>We loved the idea of turning a simple lemonade stand into an epic adventure. Instead of just buying ingredients, our heroes Joe and Jade have to hunt monsters and explore dangerous locations to gather what they need. It's the perfect blend of wholesome business goals and exciting monster-hunting action!</p>
+                <p>The concept let us create diverse gameplay - from combat in the forest to puzzle-solving in beach mazes to boss battles in icy caves. Plus, who doesn't love the idea of making the perfect lemonade after an epic quest?</p>
+            </div>
+        </section>
+
+        <section class="devs-hero">
+            <h1 class="pixel-title">Meet the Devs</h1>
+        </section>
+
+        <section class="team-grid">
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/dylan.png" alt="Dylan" class="dev-img">
+                </div>
+                <h3>Dylan</h3>
+                <p class="role">Scrum Master</p>
+                <p class="bio">Keeps the team organized and on track</p>
+                <div class="dev-sprite"></div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/Jack.png" alt="Jack" class="dev-img">
+                </div>
+                <h3>Jack</h3>
+                <p class="role">Developer</p>
+                <p class="bio">Created Level 3 and the inventory bar</p>
+                <div class="dev-sprite"></div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/sadbhb.png" alt="Sadbhb" class="dev-img">
+                </div>
+                <h3>Sadhbh</h3>
+                <p class="role">Artist & Developer</p>
+                <p class="bio">Designed and coded collectables</p>
+                <div class="dev-sprite"></div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/james.png" alt="James" class="dev-img">
+                </div>
+                <h3>James</h3>
+                <p class="role">Developer</p>
+                <p class="bio">Designed Level 2</p>
+                <div class="dev-sprite"></div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/lily.png" alt="Lily" class="dev-img">
+                </div>
+                <h3>Lily</h3>
+                <p class="role">Developer</p>
+                <p class="bio">Designed Level 1 and coded the hero</p>
+                <div class="dev-sprite"></div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="images/abigail.png" alt="Abigail" class="dev-img">
+                </div>
+                <h3>Abigail</h3>
+                <p class="role">Artist</p>
+                <p class="bio">Designed the heroes and monsters</p>
+                <div class="dev-sprite"></div>
+            </div>
+        </section>
+
+        <section class="code-section">
+            <h1 class="pixel-title" style="text-align: center; margin-top: 40px;">Project Code</h1>
+            <div class="code-gallery">
+                <div class="code-image">
+                    <img src="code1.png" alt="Code Screenshot 1" onclick="openModal(this)">
+                    <p>Main Game Logic</p>
+                </div>
+                <div class="code-image">
+                    <img src="code2.png" alt="Code Screenshot 2" onclick="openModal(this)">
+                    <p>Character Movement</p>
+                </div>
+                <div class="code-image">
+                    <img src="code3.png" alt="Code Screenshot 3" onclick="openModal(this)">
+                    <p>Lemon Collection System</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Quiz - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGUL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="quiz-main">
+        <section class="quiz-header">
+            <h1 class="pixel-title">Game Knowledge Quiz</h1>
+            <p>Test your knowledge about When Death Gives You Lemons!</p>
+        </section>
+
+        <section class="quiz-container">
+            <div class="quiz-card">
+                <div id="quiz-content">
+                    <div class="question" id="question-1">
+                        <h3>Question 1: What are the main characters' names?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(1, 'A')">A) Jack and Jill</button>
+                            <button class="answer-btn" onclick="selectAnswer(1, 'B')">B) Joe Zest and Jade Zest</button>
+                            <button class="answer-btn" onclick="selectAnswer(1, 'C')">C) Mike and Sarah</button>
+                        </div>
+                    </div>
+
+                    <div class="question hidden" id="question-2">
+                        <h3>Question 2: What does Sugar Cane drop when defeated?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(2, 'A')">A) 1 Lemon</button>
+                            <button class="answer-btn" onclick="selectAnswer(2, 'B')">B) 1 Sugar</button>
+                            <button class="answer-btn" onclick="selectAnswer(2, 'C')">C) 1 Ice</button>
+                        </div>
+                    </div>
+
+                    <div class="question hidden" id="question-3">
+                        <h3>Question 3: Where is the Sugar Cane enemy found?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(3, 'A')">A) Forest</button>
+                            <button class="answer-btn" onclick="selectAnswer(3, 'B')">B) Beach</button>
+                            <button class="answer-btn" onclick="selectAnswer(3, 'C')">C) Ice Cave</button>
+                        </div>
+                    </div>
+
+                    <div class="question hidden" id="question-4">
+                        <h3>Question 4: What is the boss enemy called?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(4, 'A')">A) Malimoon</button>
+                            <button class="answer-btn" onclick="selectAnswer(4, 'B')">B) Hailcrusher</button>
+                            <button class="answer-btn" onclick="selectAnswer(4, 'C')">C) Ice Slime</button>
+                        </div>
+                    </div>
+
+                    <div class="question hidden" id="question-5">
+                        <h3>Question 5: How many lemons can you carry at once in the forest level?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(5, 'A')">A) 10</button>
+                            <button class="answer-btn" onclick="selectAnswer(5, 'B')">B) 5</button>
+                            <button class="answer-btn" onclick="selectAnswer(5, 'C')">C) 3</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-results hidden" id="results">
+                        <h3>Quiz Complete!</h3>
+                        <p id="score-text"></p>
+                        <button class="btn primary" onclick="restartQuiz()">Take Quiz Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentQuestion = 1;
+        let score = 0;
+        const correctAnswers = {1: 'B', 2: 'B', 3: 'B', 4: 'B', 5: 'B'};
+
+        function selectAnswer(questionNum, answer) {
+            if (correctAnswers[questionNum] === answer) {
+                score++;
+            }
+            
+            document.getElementById('question-' + questionNum).classList.add('hidden');
+            
+            if (questionNum < 5) {
+                currentQuestion++;
+                document.getElementById('question-' + currentQuestion).classList.remove('hidden');
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results');
+            const scoreText = document.getElementById('score-text');
+            
+            let message = '';
+            if (score === 5) {
+                message = 'Perfect! You got all 5 questions correct! 🍋';
+            } else if (score >= 3) {
+                message = `Great job! You got ${score} out of 5 questions correct!`;
+            } else {
+                message = `You got ${score} out of 5 questions correct. Try playing the game more!`;
+            }
+            
+            scoreText.textContent = message;
+            resultsDiv.classList.remove('hidden');
+        }
+
+        function restartQuiz() {
+            currentQuestion = 1;
+            score = 0;
+            
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('question-1').classList.remove('hidden');
+        }
+    </script>
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
