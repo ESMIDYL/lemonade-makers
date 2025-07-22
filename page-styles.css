@@ -1,0 +1,368 @@
+/* Override body background for non-index pages */
+body:not(.index-page):not(.enemies-page):not(.story-page):not(.about-page):not(.characters-page):not(.contact-page) {
+    background: #fafafa !important;
+}
+
+body:not(.index-page):not(.enemies-page):not(.story-page):not(.about-page):not(.characters-page):not(.contact-page)::before {
+    display: none !important;
+}
+
+/* Code Gallery Styles */
+.code-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.code-image {
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.code-image:hover {
+    transform: scale(1.05);
+}
+
+.code-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.code-image p {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+.map-placeholder {
+  width: 350px;
+  height: 220px;
+  overflow: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: #222c38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.scrollable-map {
+  min-width: 600px;
+  min-height: 400px;
+  max-width: none;
+  max-height: none;
+  display: block;
+}
+
+.beach-map-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.level-detail.beach .nav-menu a {
+  color: #FF8C00 !important;
+}
+.level-detail.beach .nav-menu a:hover {
+  background: #FFD700;
+  color: #FF8C00 !important;
+}
+
+.level-detail.beach .level-visual-large,
+.level-detail.cave .level-visual-large,
+.level-detail.forest .level-visual-large {
+  width: 900px;
+  height: 600px;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-detail.beach .level-content,
+.level-detail.cave .level-content,
+.level-detail.forest .level-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1600px) {
+  .level-detail.beach .level-visual-large,
+  .level-detail.cave .level-visual-large,
+  .level-detail.forest .level-visual-large {
+    width: 900px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .level-detail.beach .level-content,
+  .level-detail.cave .level-content,
+  .level-detail.forest .level-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .level-detail.beach .level-visual-large,
+  .level-detail.cave .level-visual-large,
+  .level-detail.forest .level-visual-large {
+    width: 100%;
+    height: 400px;
+  }
+}
+.level-detail.beach .scrollable-map,
+.level-detail.cave .scrollable-map {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 16px;
+  background: #fff;
+  display: block;
+}
+.level-detail.beach .level-map,
+.level-detail.cave .level-map {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 1100px) {
+  .level-detail.cave .level-visual-large {
+    width: 100%;
+    height: 400px;
+  }
+  .level-detail.cave .level-map {
+    min-width: 600px;
+    min-height: 400px;
+  }
+}
+
+.level-detail.forest .scrollable-map {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 16px;
+  background: #fff;
+  display: block;
+}
+.level-detail.forest .level-map {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.level-detail.cave {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+.level-detail.cave::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #87CEEB 0%, #708090 25%, #556B7D 50%, #3E4A5C 75%, #2F3A4B 100%);
+  z-index: -1;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.info-image img {
+  width: 600px;
+  max-width: 40vw;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  display: block;
+}
+.info-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.25rem;
+}
+@media (max-width: 1000px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 20px 0;
+  }
+  .info-image img {
+    width: 100%;
+    max-width: 90vw;
+  }
+  .info-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 60px 20px;
+  background: #FFD700;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: #FFD700;
+  color: #222c2c;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  opacity: 0.85;
+}
+.back-to-top:hover {
+  background: #FF8C00;
+  color: #fff;
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.level-detail.beach .pixel-title {
+  color: #FF8C00 !important;
+}
+
+.pre-order-main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.pre-order-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.pre-order-form-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.pre-order-form .form-group {
+    margin-bottom: 20px;
+}
+.pre-order-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #fff;
+}
+.pre-order-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Quiz Styles */
+.answers .answer-btn.correct {
+    background: #28a745 !important;
+    color: #fff !important;
+    transform: scale(1.05);
+}
+.answers .answer-btn.incorrect {
+    background: #dc3545 !important;
+    color: #fff !important;
+}
+.answers .answer-btn.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}

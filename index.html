@@ -1,0 +1,112 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="index-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-buttons">
+                <button class="btn primary">▶ Watch Trailer</button>
+                <a href="pre-order.html" class="btn secondary">🍋 Wishlist Now</a>
+            </div>
+            <div class="walking-ground"></div>
+            <div class="malimoon-walker" onclick="openCharacterPage('malimoon')"></div>
+            <div class="hailcrusher-walker" onclick="openCharacterPage('hailcrusher')"></div>
+            <div class="joe-walker" onclick="openCharacterPage('joe')"></div>
+            <div class="jade-walker" onclick="openCharacterPage('jade')"></div>
+        </section>
+
+        <section class="game-info">
+            <div class="info-container">
+                <div class="info-image">
+                    <img src="images/Untitled design (5).png" alt="Game Screenshot">
+                </div>
+                <div class="info-text">
+                    <h2>About the Game</h2>
+                    <p>When brainstorming game concepts, we wanted something fun and unique that would make people smile. The phrase "when life gives you lemons, make lemonade" sparked our creativity - but we thought, what if death gave you lemons instead? We loved the idea of turning a simple lemonade stand into an epic adventure. Instead of just buying ingredients, our heroes Joe and Jade have to hunt monsters and explore dangerous locations to gather what they need. It's the perfect blend of wholesome business goals and exciting monster-hunting action! The concept let us create diverse gameplay - from combat in the forest to puzzle-solving in beach mazes to boss battles in icy caves.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script>
+        function openCharacterPage(character) {
+            switch(character) {
+                case 'malimoon':
+                    window.location.href = 'forest.html';
+                    break;
+                case 'hailcrusher':
+                    window.location.href = 'cave.html';
+                    break;
+                case 'joe':
+                    window.location.href = 'characters.html';
+                    break;
+                case 'jade':
+                    window.location.href = 'characters.html';
+                    break;
+            }
+        }
+        
+        function togglePlay() {
+            const audio = document.getElementById('game-theme');
+            const button = document.getElementById('play-button');
+            
+            if (audio.paused) {
+                audio.play();
+                button.innerHTML = '🔇 Pause Theme';
+            } else {
+                audio.pause();
+                button.innerHTML = '🔊 Play Theme';
+            }
+        }
+    </script>
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

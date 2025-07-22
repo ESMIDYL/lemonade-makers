@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Insights - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="about-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <h1 class="pixel-title">Why Our Game Stands Out</h1>
+        </section>
+
+        <section class="idea-section">
+            <div class="idea-card">
+                <h2>Why Our Lemonade Stand Adventure Game Stands Out</h2>
+                <p>Welcome! Here's how our 2D pixel adventure about Joe and Jade raises the bar in comparison to other well-known games, and why you'll love the unique blend we've created.</p>
+            </div>
+        </section>
+
+        <section class="comparison-section">
+            <div class="idea-card">
+                <h2>How Our Game Compares to Others</h2>
+                <div class="game-cards-container">
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/stardewvally.png" alt="Stardew Valley" class="game-card-img">
+                                <h3>Stardew Valley</h3>
+                                <p class="price">€14.99 (Steam) / €19.99 (Switch)</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Stardew Valley</h3>
+                                <p><strong>What's Similar:</strong> Resource gathering, town setting, community focus</p>
+                                <p><strong>How We Stand Out:</strong> Delivers a focused, story-driven quest rather than a long sim. Players dive into adventure right away, not lengthy farming.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/harvestmoon.png" alt="Harvest Moon" class="game-card-img">
+                                <h3>Harvest Moon</h3>
+                                <p class="price">€49.99 (Switch)</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Harvest Moon</h3>
+                                <p><strong>What's Similar:</strong> Resource gathering, town setting, community focus</p>
+                                <p><strong>How We Stand Out:</strong> Delivers a focused, story-driven quest rather than a long sim. Players dive into adventure right away, not lengthy farming.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/terraria.png" alt="Terraria" class="game-card-img">
+                                <h3>Terraria</h3>
+                                <p class="price">€9.99 (Steam)</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Terraria</h3>
+                                <p><strong>What's Similar:</strong> 2D exploration, combat, collecting ingredients</p>
+                                <p><strong>How We Stand Out:</strong> Every quest serves a story purpose (restock the stand), not just sandbox play. Our quirky creatures add charm and humor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/minecraft.png" alt="Minecraft" class="game-card-img">
+                                <h3>Minecraft</h3>
+                                <p class="price">€29.99 (PC)</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Minecraft</h3>
+                                <p><strong>What's Similar:</strong> 3D exploration, combat, collecting ingredients</p>
+                                <p><strong>How We Stand Out:</strong> Every quest serves a story purpose (restock the stand), not just sandbox play. Our quirky creatures add charm and humor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/moonlighter.png" alt="Moonlighter" class="game-card-img">
+                                <h3>Moonlighter</h3>
+                                <p class="price">€19.99 (Steam/Switch)</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Moonlighter</h3>
+                                <p><strong>What's Similar:</strong> Shopkeeping plus combat</p>
+                                <p><strong>How We Stand Out:</strong> Puts the adventure front and center, focusing on fun exploration and light puzzles, with charming pixel graphics for all ages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-card">
+                        <div class="game-card-inner">
+                            <div class="game-card-front">
+                                <img src="images/lemonadestand.png" alt="Lemonade Stand" class="game-card-img">
+                                <h3>Classic Lemonade Stand</h3>
+                                <p class="price">Free to €1.99</p>
+                            </div>
+                            <div class="game-card-back">
+                                <h3>Classic Lemonade Stand</h3>
+                                <p><strong>What's Similar:</strong> Running a lemonade business, managing supplies</p>
+                                <p><strong>How We Stand Out:</strong> Goes beyond business: you'll go on fantasy adventures, solving fun challenges and fighting for ingredients, not just setting prices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-tip">Hover over or tap cards to see comparison details</p>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="idea-card">
+                <h2>What Makes Our Game Special</h2>
+                <ul class="features-list">
+                    <li><strong>Short and Sweet Adventure:</strong> No endless grinding—enjoy a tightly crafted story with a satisfying outcome.</li>
+                    <li><strong>Creative Worlds & Whimsical Characters:</strong> Unforgettable settings like LemonShade Hollow and unique monsters keep every step fresh.</li>
+                    <li><strong>Variety in Gameplay:</strong> From battles to maze navigation to clever exploration, you'll never face the same challenge twice.</li>
+                    <li><strong>Accessible and Heartfelt:</strong> Simple controls and positive themes make it welcoming for all players, young and old.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="features-comparison-section">
+            <div class="idea-card">
+                <h2>Feature Comparison</h2>
+                <div class="feature-table-container">
+                    <table class="feature-table">
+                        <thead>
+                            <tr>
+                                <th>Feature / Game</th>
+                                <th>When Death Gives You Lemons</th>
+                                <th>Stardew Valley</th>
+                                <th>Terraria</th>
+                                <th>Moonlighter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2D Pixel Graphics</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Story-Driven Quest</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="cross">❌</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Resource Gathering</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Combat / Enemies</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Shopkeeping / Business</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="cross">❌</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Puzzle / Maze Exploration</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="cross">❌</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Multiple Themed Locations</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Accessible for All Ages</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                            <tr>
+                                <td>Focused, Compact Gameplay</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="cross">❌</span></td>
+                                <td><span class="cross">❌</span></td>
+                                <td><span class="cross">❌</span></td>
+                            </tr>
+                            <tr>
+                                <td>Humorous & Whimsical Tone</td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                                <td><span class="check">✅</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="idea-card">
+                <h2>Why You'll Love Playing</h2>
+                <ul class="benefits-list">
+                    <li><strong>A Story with Purpose:</strong> Every quest is about restoring joy—not just high scores.</li>
+                    <li><strong>Inventive Fun:</strong> Combining the best parts of exploration and business in a single adventure.</li>
+                    <li><strong>Emotional Payoff:</strong> Experience the delight of bringing happiness back to your community, one glass at a time.</li>
+                </ul>
+                <p class="conclusion">When other games give you lemons, we give you a genuine adventure. Come see why our lemonade quest is a refreshing journey you won't forget!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

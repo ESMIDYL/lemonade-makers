@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beach - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="level-detail beach">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="level-detail beach">
+        <div class="level-header beach-bg">
+            <div class="level-title-section">
+                <h1 class="pixel-title">🏖 Level 2: Sugared Glass Shores</h1>
+                <p class="level-subtitle">Navigate the maze to find glass and sugar</p>
+            </div>
+        </div>
+
+        <div class="level-content">
+            <div class="level-info">
+                <div class="info-card">
+                    <h2>Mission Objective</h2>
+                    <p>Navigate through the beach maze to find 10 glass and collect 15 sugar from sugar cane. No enemies to defeat - pure exploration!</p>
+                </div>
+
+                <div class="info-card">
+                    <h2>Items to Find</h2>
+                    <div class="enemy-list">
+                        <div class="enemy-item">
+                            <span class="enemy-sprite">🔍🍬</span>
+                            <div>
+                                <strong>Glass & Sugar Cane</strong>
+                                <p>Search the maze for 10 glass pieces and harvest 15 sugar from sugar cane plants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Drops & Rewards</h2>
+                    <div class="powerup-list">
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">🔍</span>
+                            <strong>Glass</strong> - 10 pieces needed for lemonade containers
+                        </div>
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">🍬</span>
+                            <strong>Sugar</strong> - 15 pieces from sugar cane plants
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Level Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-label">Map Style</span>
+                            <span class="stat-value">🌀 Maze</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Target</span>
+                            <span class="stat-value">🔍 10 Glass & 🍬 15 Sugar</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Weapon</span>
+                            <span class="stat-value">⚔️ Sword</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-visual-large">
+                <div class="scrollable-map">
+                    <img src="images/beachmap.png" alt="Beach Level Map" class="level-map">
+                </div>
+            </div>
+        </div>
+
+        <div class="level-actions">
+            <a href="levels.html" class="btn secondary">← Back to Levels</a>
+            <button class="btn primary">🎮 Play This Level</button>
+            <a href="cave.html" class="btn secondary">Next Level →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

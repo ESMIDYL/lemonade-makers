@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Order - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="enemies-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pre-order-main">
+        <section class="pre-order-hero">
+            <h1 class="pixel-title">Pre-Order Now!</h1>
+            <p>Be the first to know when "When Death Gives You Lemons" is released. Sign up for updates and get notified on launch day!</p>
+        </section>
+
+        <section class="pre-order-form-container">
+            <form class="pre-order-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <button type="submit" class="btn primary">Sign Up for Updates</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html> 

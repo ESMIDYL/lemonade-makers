@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forest - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="level-detail forest">
+        <div class="level-header forest-bg">
+            <div class="level-title-section">
+                <h1 class="pixel-title">🌲 Level 1: LemonShade Hollow</h1>
+                <p class="level-subtitle">Hunt Malemons in their natural habitat</p>
+            </div>
+        </div>
+
+        <div class="level-content">
+            <div class="level-info">
+                <div class="info-card">
+                    <h2>Mission Objective</h2>
+                    <p>Hunt Malemons in the forest and collect 10 lemons total to complete the level.</p>
+                </div>
+
+                <div class="info-card">
+                    <h2>Enemies</h2>
+                    <div class="enemy-list">
+                        <div class="enemy-item">
+                            <span class="enemy-sprite">🍋👹</span>
+                            <div>
+                                <strong>Malemons</strong>
+                                <p>Each malemon has a health bar and drops 1 lemon when defeated. Hunt them throughout the forest.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Map Features</h2>
+                    <div class="powerup-list">
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">🏠</span>
+                            <strong>Player Spawn</strong> - You start near the lemon home
+                        </div>
+                        <div class="powerup-item">
+                            <span class="powerup-sprite">🎯</span>
+                            <strong>Lemon Home</strong> - Deposit lemons here. Need 10 total lemons to advance.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2>Level Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-label">Target</span>
+                            <span class="stat-value">10 🍋 Lemons</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Weapon</span>
+                            <span class="stat-value">⚔️ Sword</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Health</span>
+                            <span class="stat-value">❤️ Health Bar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="level-visual-large">
+                <div class="scrollable-map">
+                    <img src="images/Level1ScreenShot.png" alt="Forest Map" class="level-map">
+                </div>
+            </div>
+        </div>
+
+        <div class="level-actions">
+            <a href="levels.html" class="btn secondary">← Back to Levels</a>
+            <button class="btn primary">🎮 Play This Level</button>
+            <a href="beach.html" class="btn secondary">Next Level →</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

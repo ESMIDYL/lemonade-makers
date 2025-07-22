@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Quiz - When Death Gives You Lemons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🍋 WDGYL</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Levels ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forest.html">🌲 Forest</a></li>
+                        <li><a href="beach.html">🏖 Beach</a></li>
+                        <li><a href="cave.html">❄ Cave</a></li>
+                    </ul>
+                </li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="enemies.html">Enemies</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pre-order.html">Pre-Order</a></li>
+                <li><a href="why-us.html">Marketing Insights</a></li>
+            </ul>
+            <div class="audio-player">
+                <audio id="game-theme" src="When Death Gives U Lemons.mp3"></audio>
+                <button id="play-button" class="audio-btn" onclick="togglePlay()">🔊 Play Theme</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="quiz-main">
+        <section class="quiz-header">
+            <h1 class="pixel-title">Game Knowledge Quiz</h1>
+            <p>Test your knowledge about When Death Gives You Lemons!</p>
+        </section>
+
+        <section class="quiz-container">
+            <div class="quiz-card">
+                <div id="quiz-content">
+                    <div class="question" id="question-1">
+                        <h3>Question 1: What are the main characters' names?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(1, 'A')">A) Jack and Jill</button>
+                            <button class="answer-btn" onclick="selectAnswer(1, 'B')">B) Joe and Jade</button>
+                            <button class="answer-btn" onclick="selectAnswer(1, 'C')">C) Mike and Sarah</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-2">
+                        <h3>Question 2: What is the first level of the game?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(2, 'A')">A) Sugared Glass Shores</button>
+                            <button class="answer-btn" onclick="selectAnswer(2, 'B')">B) Shiverdeep Caverns</button>
+                            <button class="answer-btn" onclick="selectAnswer(2, 'C')">C) LemonShade Hollow</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-3">
+                        <h3>Question 3: Which enemy is the final boss?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(3, 'A')">A) HailCrusher</button>
+                            <button class="answer-btn" onclick="selectAnswer(3, 'B')">B) MaLimoon</button>
+                            <button class="answer-btn" onclick="selectAnswer(3, 'C')">C) ShiverGoo</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-4">
+                        <h3>Question 4: What ingredient do you get from ShiverGoos?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(4, 'A')">A) Lemons</button>
+                            <button class="answer-btn" onclick="selectAnswer(4, 'B')">B) Sugar</button>
+                            <button class="answer-btn" onclick="selectAnswer(4, 'C')">C) Ice</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-5">
+                        <h3>Question 5: What is the maximum number of lemons you can carry at once in the forest?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(5, 'A')">A) 5</button>
+                            <button class="answer-btn" onclick="selectAnswer(5, 'B')">B) 10</button>
+                            <button class="answer-btn" onclick="selectAnswer(5, 'C')">C) 15</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-6">
+                        <h3>Question 6: Which level has no enemies to fight?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(6, 'A')">A) The Forest</button>
+                            <button class="answer-btn" onclick="selectAnswer(6, 'B')">B) The Beach</button>
+                            <button class="answer-btn" onclick="selectAnswer(6, 'C')">C) The Cave</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-7">
+                        <h3>Question 7: What is the name of the angry lemon monsters in the forest?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(7, 'A')">A) Sour Stompers</button>
+                            <button class="answer-btn" onclick="selectAnswer(7, 'B')">B) Citrus Creeps</button>
+                            <button class="answer-btn" onclick="selectAnswer(7, 'C')">C) MaLimoons</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-8">
+                        <h3>Question 8: What do you need to collect on the beach?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(8, 'A')">A) Glass and Sugar</button>
+                            <button class="answer-btn" onclick="selectAnswer(8, 'B')">B) Lemons and Ice</button>
+                            <button class="answer-btn" onclick="selectAnswer(8, 'C')">C) Shells and Pearls</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-9">
+                        <h3>Question 9: What is the goal of the game?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(9, 'A')">A) To become king of the forest</button>
+                            <button class="answer-btn" onclick="selectAnswer(9, 'B')">B) To make the perfect lemonade</button>
+                            <button class="answer-btn" onclick="selectAnswer(9, 'C')">C) To build a castle</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="question-10">
+                        <h3>Question 10: What weapon do Joe and Jade use?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" onclick="selectAnswer(10, 'A')">A) A bow and arrow</button>
+                            <button class="answer-btn" onclick="selectAnswer(10, 'B')">B) A magic wand</button>
+                            <button class="answer-btn" onclick="selectAnswer(10, 'C')">C) A sword</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-results hidden" id="results">
+                        <h3>Quiz Complete!</h3>
+                        <p id="score-text"></p>
+                        <button class="btn primary" onclick="restartQuiz()">Take Quiz Again</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">🍋 Lemon Makers</div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">Steam</a>
+                <a href="#" class="social-btn">Discord</a>
+            </div>
+            <p>&copy; 2024 When Death Gives You Lemons</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentQuestion = 1;
+        let score = 0;
+        const correctAnswers = {1: 'B', 2: 'B', 3: 'B', 4: 'B', 5: 'B'};
+
+        function selectAnswer(questionNum, answer) {
+            if (correctAnswers[questionNum] === answer) {
+                score++;
+            }
+            
+            document.getElementById('question-' + questionNum).classList.add('hidden');
+            
+            if (questionNum < 5) {
+                currentQuestion++;
+                document.getElementById('question-' + currentQuestion).classList.remove('hidden');
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            const resultsDiv = document.getElementById('results');
+            const scoreText = document.getElementById('score-text');
+            
+            let message = '';
+            if (score === 5) {
+                message = 'Perfect! You got all 5 questions correct! 🍋';
+            } else if (score >= 3) {
+                message = `Great job! You got ${score} out of 5 questions correct!`;
+            } else {
+                message = `You got ${score} out of 5 questions correct. Try playing the game more!`;
+            }
+            
+            scoreText.textContent = message;
+            resultsDiv.classList.remove('hidden');
+        }
+
+        function restartQuiz() {
+            currentQuestion = 1;
+            score = 0;
+            
+            document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('question-1').classList.remove('hidden');
+        }
+    </script>
+    <script src="chat-widget.js"></script>
+    <script src="script.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>
